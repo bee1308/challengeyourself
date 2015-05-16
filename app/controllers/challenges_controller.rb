@@ -10,6 +10,8 @@ class ChallengesController < ApplicationController
   # GET /challenges/1
   # GET /challenges/1.json
   def show
+    @comments = @challenge.comments.all
+    @comment = @challenge.comments.build
   end
 
   # GET /challenges/new
